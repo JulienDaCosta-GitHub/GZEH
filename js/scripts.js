@@ -35,9 +35,9 @@ var mesh	= new THREE.Mesh( geometry, material );
 scene.add( mesh );
 mesh.lookAt(new THREE.Vector3(0,1,0));
 /* Play around with the scaling */
-mesh.scale.y	= 3.5;
-mesh.scale.x	= 3;
-mesh.scale.z	= 0.05;
+mesh.scale.y    = 8.5;
+    mesh.scale.x    = 10.8;
+    mesh.scale.z    = 0.08;
 mesh.scale.multiplyScalar(10);
 /* Play around with the camera */
 onRenderFcts.push(function(delta, now){
