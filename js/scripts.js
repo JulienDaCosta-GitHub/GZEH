@@ -41,7 +41,7 @@ mesh.scale.z	= 0.05;
 mesh.scale.multiplyScalar(10);
 /* Play around with the camera */
 onRenderFcts.push(function(delta, now){
-	mesh.rotation.z += 0.2 * delta;	
+	mesh.rotation.z += 0.0 * delta;	
 })
 onRenderFcts.push(function(){
 	renderer.render( scene, camera );		
