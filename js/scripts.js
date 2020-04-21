@@ -71,13 +71,3 @@ requestAnimationFrame(function animate(nowMsec){
 	})
 });
 
-var loader = new GLTFLoader();
-
-loader.load(
-	'src/scene.gltf',
-
-	function( gltf ) {
-		scene.add(  gltf.scene );
-	}
-)
-
