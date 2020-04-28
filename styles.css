@@ -20,6 +20,30 @@ body{
     -webkit-perspective: 1000px;
     -webkit-perspective-origin: 50% 100px;
 }
+.pyramid-gyro2 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    margin-left: -100px;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 100px;
+}
+.pyramid-gyro3 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-left: -100px;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 100px;
+}
+.pyramid-gyro4 {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    margin-left: -100px;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 100px;
+}
 .pyramid-axis {
     position: relative;
     width: 200px;

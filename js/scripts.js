@@ -2,23 +2,19 @@ var renderer	= new THREE.WebGLRenderer({
 	antialias	: true
 });
 
-/* Fullscreen */
-
 renderer.setSize( window.innerWidth, window.innerHeight );
 
-/* Append to HTML */
 
 document.body.appendChild( renderer.domElement );
 var onRenderFcts= [];
 var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
-/* Play around with camera positioning */
 
 camera.position.z = 15; 
 camera.position.y = 2;
 
-/* Fog provides depth to the landscape*/
+/* Jeu de lumières pour le fond de map */
 
 scene.fog = new THREE.Fog(0x000, 0, 45);
 ;(function(){
@@ -36,7 +32,7 @@ THREEx.Terrain.simplexHeightMap(heightMap)
 var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
 THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
 
-/* Wireframe built-in color is white, no need to change that */
+/* Materiel appliqué a notre élément mesh */
 
 var material = new THREE.MeshBasicMaterial({
 	wireframe: true
@@ -45,14 +41,14 @@ var mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
 mesh.lookAt(new THREE.Vector3(0,1,0));
 
-/* Play around with the scaling */
+/* Taille */
 
 mesh.scale.y = 8.5;
 mesh.scale.x = 10.8;
 mesh.scale.z = 0.08;
 mesh.scale.multiplyScalar(10);
 
-/* Play around with the camera */
+/* Tourner la caméra si souhaité */
 
 onRenderFcts.push(function(delta, now){
 	mesh.rotation.z += 0.0 * delta;	
