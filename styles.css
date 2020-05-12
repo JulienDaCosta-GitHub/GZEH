@@ -97,11 +97,6 @@ body{
     -webkit-transform: rotateX(90deg) translateX(100px);
 }
 
-
-
-
-
-
 .fyi {
     position: absolute;
     top: 25px;
@@ -109,4 +104,93 @@ body{
     width: 250px;
     color: #fff;
 }
+
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.topnav img {
+    height: 45px;
+    margin: 10px;
+}
+
+.text1 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 400px;
+    left:35%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+.text2 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 400px;
+    right: 5%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+.text3 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 400px;
+    left: 5%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+.text4 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 450px;
+    left: 5%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+.text5 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 450px;
+    left:35%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+.text6 {
+    width: 430px;
+    position: absolute;
+    color: white;
+    margin: 25px;
+    bottom: 450px;
+    right: 5%;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: center;
+}
+
+
 
