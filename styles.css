@@ -44,22 +44,6 @@ body{
     -webkit-perspective: 1000px;
     -webkit-perspective-origin: 50% 100px;
 }
-.pyramid-gyro5 {
-    position: absolute;
-    top: 60%;
-    left: 40%;
-    margin-left: -100px;
-    -webkit-perspective: 1000px;
-    -webkit-perspective-origin: 50% 100px;
-}
-.pyramid-gyro6 {
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    margin-left: -100px;
-    -webkit-perspective: 1000px;
-    -webkit-perspective-origin: 50% 100px;
-}
 .pyramid-axis {
     position: relative;
     width: 200px;
@@ -113,96 +97,16 @@ body{
     -webkit-transform: rotateX(90deg) translateX(100px);
 }
 
+
+
+
+
+
 .fyi {
     position: absolute;
     top: 25px;
     right: 25px;
     width: 250px;
     color: #fff;
-}
-
-.topnav {
-    background-color: transparent;
-    overflow: hidden;
-    border-bottom: 1px solid white;
-    display: flex;
-    justify-content: center;
-}
-
-.topnav img {
-    height: 45px;
-    margin: 10px;
-}
-
-.text1 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 400px;
-    left:35%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
-}
-
-.text2 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 400px;
-    right: 5%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
-}
-
-.text3 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 400px;
-    left: 5%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
-}
-
-.text4 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 450px;
-    left: 5%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
-}
-
-.text5 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 450px;
-    left:35%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
-}
-
-.text6 {
-    width: 430px;
-    position: absolute;
-    color: white;
-    margin: 25px;
-    bottom: 450px;
-    right: 5%;
-    opacity: 0;
-    transition: 0.5s all ease;
-    text-align: center;
 }
 
