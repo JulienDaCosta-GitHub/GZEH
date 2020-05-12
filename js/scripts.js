@@ -151,6 +151,13 @@ var shape6 = THREE.SceneUtils.createMultiMaterialObject(
 shape6.position.set(0.2, 1.5, 10.5);
 scene.add( shape6 );
 
+$(document).ready(function(){
+    $(shape).click(function(){
+		$('.text1').css('opacity', '1');
+		alert('Click');
+    })
+});
+
 
 
 
