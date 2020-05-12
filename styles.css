@@ -44,6 +44,22 @@ body{
     -webkit-perspective: 1000px;
     -webkit-perspective-origin: 50% 100px;
 }
+.pyramid-gyro5 {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    margin-left: -100px;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 100px;
+}
+.pyramid-gyro6 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    margin-left: -100px;
+    -webkit-perspective: 1000px;
+    -webkit-perspective-origin: 50% 100px;
+}
 .pyramid-axis {
     position: relative;
     width: 200px;
