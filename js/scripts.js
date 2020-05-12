@@ -53,7 +53,7 @@ mesh.scale.multiplyScalar(10);
 /* Tourner la caméra si souhaité */
 
 onRenderFcts.push(function(delta, now){
-	mesh.rotation.z += 0.0 * delta;	
+	mesh.rotation.z += 0.0 * delta;
 })
 onRenderFcts.push(function(){
 	renderer.render( scene, camera );		
@@ -73,7 +73,7 @@ requestAnimationFrame(function animate(nowMsec){
 
 
 
-/*Test OBJLoader et MTLLoader */
+
 
 
 /*Style des pyramides (texture, background)*/
