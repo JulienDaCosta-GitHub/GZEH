@@ -13,8 +13,8 @@ var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
-camera.position.z = 15; 
-camera.position.y = 2;
+camera.position.z = 0;
+camera.position.y = 0;
 
 /* Jeu de lumières pour le fond de map */
 
@@ -50,13 +50,14 @@ mesh.scale.x = 10.8;
 mesh.scale.z = 0.08;
 mesh.scale.multiplyScalar(10);
 
+
 /* Tourner la caméra si souhaité */
 
 onRenderFcts.push(function(delta, now){
 	mesh.rotation.z += 0.0 * delta;
 })
 onRenderFcts.push(function(){
-	renderer.render( scene, camera );		
+	renderer.render( scene, camera );
 })
 var lastTimeMsec= null
 requestAnimationFrame(function animate(nowMsec){
@@ -68,12 +69,6 @@ requestAnimationFrame(function animate(nowMsec){
 		onRenderFct(deltaMsec/1000, nowMsec/1000)
 	})
 });
-
-
-
-
-
-
 
 
 /*Style des pyramides (texture, background)*/
