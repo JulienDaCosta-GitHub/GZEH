@@ -96,10 +96,10 @@ scene.add( shape );
 // pyramid
 var shape = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-	new THREE.CylinderGeometry( 0, 1.8, 2.2, 4, 4 ),
+	new THREE.CylinderGeometry( 0, 1.6, 1.8, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape';
-shape.position.set(-1, 1.6, 1);
+shape.position.set(-1.5, 1.4, 1);
 scene.add( shape );
 
 
@@ -117,10 +117,11 @@ scene.add( shape3 );
 // pyramid 3
 var shape2 = THREE.SceneUtils.createMultiMaterialObject(
     // radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-    new THREE.CylinderGeometry( 0, 1.6, 1.8, 4, 4 ),
+	
+	new THREE.CylinderGeometry( 0, 1.8, 2.2, 4, 4 ),
     multiMaterial );
     renderer.domElement.id='shape2';
-shape2.position.set(2.5, 1.6, -3);
+shape2.position.set(2.5, 1.8, -3);
 scene.add( shape2 );
 
 
