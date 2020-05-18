@@ -60,72 +60,161 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 400px;
-    left:35%;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    justify-content: center;
+    margin-left: 600px;
+    margin-top: 70px;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+.button1 {
+    margin-left: 770px;
+    margin-top: 320px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    animation-duration: 0.5s;
+    transition: 0.5s all ease;
+}
+.button1:hover {
+    color: gray;
+}
+.button2 {
+    margin-left: 990px;
+    margin-top: 290px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: 0.5s all ease;
+}
+.button2:hover {
+    color: gray;
+}
+.button3 {
+    margin-left: 1200px;
+    margin-top: 360px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: 0.5s all ease;
+}
+.button3:hover {
+    color: gray;
+}
+.button4 {
+    margin-left: 455px;
+    margin-top: 570px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: 0.5s all ease;
+}
+.button4:hover {
+    color: gray;
+}
+.button5 {
+    margin-left: 735px;
+    margin-top: 570px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: 0.5s all ease;
+}
+.button5:hover {
+    color: gray;
+}
+.button6 {
+    margin-left: 1020px;
+    margin-top: 570px;
+    position: absolute;
+    background-color: rgba(125,125,125,0);
+    border-color: rgba(125,125,125,0);
+    color: white;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: 0.5s all ease;
+}
+.button6:hover {
+    color: gray;
 }
 
 .text2 {
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 400px;
-    right: 5%;
+    margin-left: 800px;
+    margin-top: 40px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
 }
 
 .text3 {
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 400px;
-    left: 5%;
+    margin-left: 1025px;
+    margin-top: 100px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
 }
 
 .text4 {
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 450px;
-    left: 5%;
+    margin-left: 275px;
+    margin-top: 300px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    flex-direction: column;
 }
 
 .text5 {
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 450px;
-    left:35%;
+    margin-left: 550px;
+    margin-top: 300px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    flex-direction: column;
 }
 
 .text6 {
     width: 430px;
     position: absolute;
     color: white;
-    margin: 25px;
-    bottom: 450px;
-    right: 5%;
+    margin-left: 850px;
+    margin-top: 300px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
+    flex-direction: column;
+}
+h1 {
+    font-family: 'Cinzel', serif;
 }
 
 
