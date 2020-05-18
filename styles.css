@@ -63,7 +63,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 400px;
     left:35%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
@@ -75,7 +75,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 400px;
     right: 5%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
@@ -87,7 +87,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 400px;
     left: 5%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
@@ -99,7 +99,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 450px;
     left: 5%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
@@ -111,7 +111,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 450px;
     left:35%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
@@ -123,7 +123,7 @@ overflow: hidden;
     margin: 25px;
     bottom: 450px;
     right: 5%;
-    opacity: 0;
+    display: none;
     transition: 0.5s all ease;
     text-align: center;
 }
