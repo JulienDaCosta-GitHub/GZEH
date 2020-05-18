@@ -13,8 +13,10 @@ var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
-camera.position.z = 15; 
-camera.position.y = 2;
+camera.position.z = 15; /*Valeur initiale 15 */
+camera.position.y = 2; /*Valeur initiale 2 */
+
+
 
 /* Jeu de lumières pour le fond de map */
 
@@ -160,7 +162,36 @@ scene.add( shape6 );
 
 
 
+/*
 
+camera.position.z = 16;
+camera.position.y = 3;
+camera.position.x =2;
+
+ */
+
+/*
+
+function rotate() {
+    camera.position.z = 16;
+    camera.position.y = 3;
+    camera.position.x =0;
+
+    for(let i = 0 ; i<9 ; i++)
+    {
+        camera.position.z + i ;
+        camera.position.y + i ;
+        camera.position.x + i ;
+
+        console.log(i)
+
+
+    }
+
+    
+}
+
+ */
 
 
 
