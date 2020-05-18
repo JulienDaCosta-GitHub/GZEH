@@ -97,6 +97,7 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape';
 shape.position.set(-1, 1.5, 1);
 scene.add( shape );
 
@@ -108,6 +109,7 @@ var shape3 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape3';
 shape3.position.set(0.5, 1.5, -1);
 scene.add( shape3 );
 
@@ -117,6 +119,7 @@ var shape2 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape2';
 shape2.position.set(2.5, 1.5, -3);
 scene.add( shape2 );
 
@@ -132,6 +135,7 @@ var shape4 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape4';
 shape4.position.set(-1, 1.5, 10.5);
 scene.add( shape4 );
 
@@ -140,6 +144,7 @@ var shape5 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape5';
 shape5.position.set(-0.4, 1.5, 10.5);
 scene.add( shape5 );
 
@@ -148,15 +153,12 @@ var shape6 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
 	multiMaterial );
+	renderer.domElement.id='shape6';
 shape6.position.set(0.2, 1.5, 10.5);
 scene.add( shape6 );
 
-$(document).ready(function(){
-    $(shape).click(function(){
-		$('.text1').css('opacity', '1');
-		alert('Click');
-    })
-});
+
+
 
 
 
