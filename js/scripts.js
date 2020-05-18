@@ -143,7 +143,7 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 1.6, 1.8, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape';
-shape.position.set(-1.5, 0.9, 1);
+shape.position.set(-1.5, 1.4, 1);
 scene.add( shape );
 
 
@@ -154,7 +154,7 @@ var shape3 = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 2, 2.5, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape3';
-shape3.position.set(0.5, 0.9, -1);
+shape3.position.set(0.5, 1.8, -1);
 scene.add( shape3 );
 
 
@@ -165,7 +165,7 @@ var shape2 = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 1.8, 2.2, 4, 4 ),
     multiMaterial );
     renderer.domElement.id='shape2';
-shape2.position.set(2.5, 0.9, -3);
+shape2.position.set(2.5, 1.8, -3);
 scene.add( shape2 );
 
 
