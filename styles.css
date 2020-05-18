@@ -57,10 +57,16 @@ overflow: hidden;
 }
 
 .text1 {
+    display: none;
+}
+.show1 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
-    display: none;
+    flex-direction: column;
+    display: flex;
     transition: 0.5s all ease;
     text-align: center;
     justify-content: center;
@@ -155,60 +161,102 @@ overflow: hidden;
 }
 
 .text2 {
+    display: none;
+    transition: 0.5s all ease;
+}
+
+.show2 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
     left: 610px;
     top: 30px;
-    display: none;
+    display: flex;
+    flex-direction : column;
     transition: 0.5s all ease;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
-}
+  }
+  
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 .text3 {
+
+    display: none;
+
+}
+.show3 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
     left: 790px;
     top: 100px;
-    display: none;
+    flex-direction: column;
+    display: flex;
     transition: 0.5s all ease;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
 }
 
 .text4 {
+    display: none;
+}
+.show4 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
     left: 180px;
     top: 250px;
-    display: none;
+    display: flex;
     transition: 0.5s all ease;
     text-align: center;
     flex-direction: column;
 }
 
 .text5 {
+    display: none;
+}
+.show5 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
     left: 400px;
     top: 250px;
-    display: none;
+    display: flex;
     transition: 0.5s all ease;
     text-align: center;
     flex-direction: column;
 }
 
 .text6 {
+    display: none;
+}
+.show6 {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     width: 430px;
     position: absolute;
     color: white;
     left: 630px;
     top: 250px;
-    display: none;
+    display: flex;
     transition: 0.5s all ease;
     text-align: center;
     flex-direction: column;
@@ -338,25 +386,25 @@ h3 {
             left: 1000px;
             top: 575px;
           }
-          .text1 {
+          .show1 {
             left: 589px;
           }
-          .text2 {
+          .show2 {
             left: 810px;
           }
-          .text3 {
+          .show3 {
             left: 1050px;
           }
-          .text4{
+          .show4{
             left: 270px;
             top: 300px;
           }
-          .text5 {
+          .show5 {
             left: 550px;
             top: 300px;
         
           }
-          .text6 {
+          .show6 {
             left: 850px;
             top: 300px;
           }
