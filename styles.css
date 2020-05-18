@@ -213,6 +213,12 @@ overflow: hidden;
     text-align: center;
     flex-direction: column;
 }
+.rotate{
+    transition: 0.5s all ease;
+}
+.rotate:hover {
+    transform: rotate(180deg);
+}
 h3 {
     font-family: 'Cinzel', serif;
     font-size: 200%;
@@ -262,7 +268,7 @@ h3 {
     visibility: hidden;
     
     }
-    
+
     .container {
         display: flex;
         flex-direction: column;
