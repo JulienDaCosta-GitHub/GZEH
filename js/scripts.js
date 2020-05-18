@@ -1,5 +1,5 @@
 /*_________________*/
-var renderer	= new THREE.WebGLRenderer({
+/*var renderer	= new THREE.WebGLRenderer({
 	antialias	: true
 });
 
@@ -7,15 +7,56 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 
 
 document.body.appendChild( renderer.domElement );
-var onRenderFcts= [];
+
 var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
 camera.position.z = 15; /*Valeur initiale 15 */
-camera.position.y = 2; /*Valeur initiale 2 */
+//camera.position.y = 2; /*Valeur initiale 2 */
+
+/*_______________________Roation dans l'espace_____________________*/
+
+var scene, renderer, camera;
+var onRenderFcts= [];
+var controls;
+
+init2();
+animate();
+
+function init2()
+{
+    renderer = new THREE.WebGLRenderer( {antialias:true} );
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize (width, height);
+    document.body.appendChild (renderer.domElement);
 
 
+    scene = new THREE.Scene();
+
+
+
+    camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 10000);
+    camera.position.y = 2;
+    camera.position.z = 15;
+    camera.lookAt (new THREE.Vector3(0,0,0));
+
+    controls = new THREE.OrbitControls (camera, renderer.domElement);
+
+
+
+}
+
+function animate()
+{
+    controls.update();
+    requestAnimationFrame ( animate );
+    renderer.render (scene, camera);
+}
+
+
+/*_______________________ /Rotation dans l'espace _______________________*/
 
 /* Jeu de lumières pour le fond de map */
 
@@ -51,7 +92,7 @@ mesh.scale.x = 10.8;
 mesh.scale.z = 0.08;
 mesh.scale.multiplyScalar(10);
 
-/* Tourner la caméra si souhaité */
+/* Tourner le sol si souhaité */
 
 onRenderFcts.push(function(delta, now){
 	mesh.rotation.z += 0.0 * delta;
@@ -202,12 +243,15 @@ scene.add( shape6 );
 
 
 
-/*
 
+
+
+
+/*
 function rotate() {
-    camera.position.z = 16;
+    camera.position.z = 18;
     camera.position.y = 3;
-    camera.position.x =0;
+    camera.position.x =2;
 
     for(let i = 0 ; i<9 ; i++)
     {
@@ -224,6 +268,8 @@ function rotate() {
 }
 
  */
+
+
 
 
 
