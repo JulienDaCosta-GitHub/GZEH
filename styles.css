@@ -311,3 +311,53 @@ h3 {
       .txt-type > .txt {
         border-right: 0.2rem solid #777;
       }
+
+
+      @media (max-width: 1920px) and (max-height: 1080px) {
+          .button1 {
+            left: 757px;
+            top: 325px;
+          }
+          .button2 {
+            left: 1000px;
+            top: 300px;
+          }
+          .button3 {
+            left: 1220px;
+            top: 375px;
+          }
+          .button4 {
+            left: 430px;
+            top: 575px;
+          }
+          .button5 {
+            left: 725px;
+            top: 575px; 
+          }
+          .button6{
+            left: 1000px;
+            top: 575px;
+          }
+          .text1 {
+            left: 589px;
+          }
+          .text2 {
+            left: 810px;
+          }
+          .text3 {
+            left: 1050px;
+          }
+          .text4{
+            left: 270px;
+            top: 300px;
+          }
+          .text5 {
+            left: 550px;
+            top: 300px;
+        
+          }
+          .text6 {
+            left: 850px;
+            top: 300px;
+          }
+      }
