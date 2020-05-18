@@ -64,13 +64,13 @@ overflow: hidden;
     transition: 0.5s all ease;
     text-align: center;
     justify-content: center;
-    margin-left: 600px;
-    margin-top: 70px;
+    left: 425px;
+    top: 60px;
     font-family: 'ZCOOL XiaoWei', serif;
 }
 .button1 {
-    margin-left: 770px;
-    margin-top: 320px;
+    left: 600px;
+    top: 260px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -84,8 +84,8 @@ overflow: hidden;
     color: gray;
 }
 .button2 {
-    margin-left: 990px;
-    margin-top: 290px;
+    left: 790px;
+    top: 230px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -98,8 +98,8 @@ overflow: hidden;
     color: gray;
 }
 .button3 {
-    margin-left: 1200px;
-    margin-top: 360px;
+    left: 960px;
+    top: 300px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -112,8 +112,8 @@ overflow: hidden;
     color: gray;
 }
 .button4 {
-    margin-left: 455px;
-    margin-top: 570px;
+    left: 345px;
+    top: 450px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -126,8 +126,8 @@ overflow: hidden;
     color: gray;
 }
 .button5 {
-    margin-left: 735px;
-    margin-top: 570px;
+    left: 570px;
+    top: 450px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -140,8 +140,8 @@ overflow: hidden;
     color: gray;
 }
 .button6 {
-    margin-left: 1020px;
-    margin-top: 570px;
+    left: 800px;
+    top: 450px;
     position: absolute;
     background-color: rgba(125,125,125,0);
     border-color: rgba(125,125,125,0);
@@ -158,8 +158,8 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin-left: 800px;
-    margin-top: 40px;
+    left: 610px;
+    top: 30px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
@@ -170,8 +170,8 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin-left: 1025px;
-    margin-top: 100px;
+    left: 790px;
+    top: 100px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
@@ -182,8 +182,8 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin-left: 275px;
-    margin-top: 300px;
+    left: 180px;
+    top: 250px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
@@ -194,8 +194,8 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin-left: 550px;
-    margin-top: 300px;
+    left: 400px;
+    top: 250px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
@@ -206,8 +206,8 @@ overflow: hidden;
     width: 430px;
     position: absolute;
     color: white;
-    margin-left: 850px;
-    margin-top: 300px;
+    left: 630px;
+    top: 250px;
     display: none;
     transition: 0.5s all ease;
     text-align: center;
@@ -215,6 +215,7 @@ overflow: hidden;
 }
 h1 {
     font-family: 'Cinzel', serif;
+    margin: 0;
 }
 
 
