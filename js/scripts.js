@@ -45,6 +45,61 @@ function init2()
     controls = new THREE.OrbitControls (camera, renderer.domElement);
 
 
+    /* Jeu de lumières pour le fond de map */
+
+    scene.fog = new THREE.Fog(0x000, 0, 45);
+    ;(function(){
+    var light = new THREE.AmbientLight( 0x202020 )
+    scene.add( light )
+    var light = new THREE.DirectionalLight('white', 5)
+    light.position.set(0.5, 0.0, 2)
+    scene.add( light )
+    var light = new THREE.DirectionalLight('white', 0.75*2)
+    light.position.set(-0.5, -0.5, -2)
+    scene.add( light )
+})()
+    var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
+    THREEx.Terrain.simplexHeightMap(heightMap)
+    var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
+    THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
+
+    /* Materiel appliqué a notre élément mesh */
+
+    var material = new THREE.MeshBasicMaterial({
+        wireframe: true
+    });
+    var mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+    mesh.lookAt(new THREE.Vector3(0,1,0));
+
+    /* Taille */
+
+    mesh.scale.y = 8.5;
+    mesh.scale.x = 10.8;
+    mesh.scale.z = 0.08;
+    mesh.scale.multiplyScalar(10);
+
+    /* Tourner le sol si souhaité */
+
+    onRenderFcts.push(function(delta, now){
+        mesh.rotation.z += 0.0 * delta;
+    })
+    onRenderFcts.push(function(){
+        renderer.render( scene, camera );
+    })
+    var lastTimeMsec= null
+    requestAnimationFrame(function animate(nowMsec){
+        requestAnimationFrame( animate );
+        lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
+        var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
+        lastTimeMsec	= nowMsec
+        onRenderFcts.forEach(function(onRenderFct){
+            onRenderFct(deltaMsec/1000, nowMsec/1000)
+        })
+    });
+
+
+
 
 }
 
@@ -58,58 +113,6 @@ function animate()
 
 /*_______________________ /Rotation dans l'espace _______________________*/
 
-/* Jeu de lumières pour le fond de map */
-
-scene.fog = new THREE.Fog(0x000, 0, 45);
-;(function(){
-	var light = new THREE.AmbientLight( 0x202020 )
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 5)
-	light.position.set(0.5, 0.0, 2)
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 0.75*2)
-	light.position.set(-0.5, -0.5, -2)
-	scene.add( light )		
-})()
-var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
-THREEx.Terrain.simplexHeightMap(heightMap)	
-var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
-THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
-
-/* Materiel appliqué a notre élément mesh */
-
-var material = new THREE.MeshBasicMaterial({
-	wireframe: true
-});
-var mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
-mesh.lookAt(new THREE.Vector3(0,1,0));
-
-/* Taille */
-
-mesh.scale.y = 8.5;
-mesh.scale.x = 10.8;
-mesh.scale.z = 0.08;
-mesh.scale.multiplyScalar(10);
-
-/* Tourner le sol si souhaité */
-
-onRenderFcts.push(function(delta, now){
-	mesh.rotation.z += 0.0 * delta;
-})
-onRenderFcts.push(function(){
-	renderer.render( scene, camera );		
-})
-var lastTimeMsec= null
-requestAnimationFrame(function animate(nowMsec){
-	requestAnimationFrame( animate );
-	lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
-	var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
-	lastTimeMsec	= nowMsec
-	onRenderFcts.forEach(function(onRenderFct){
-		onRenderFct(deltaMsec/1000, nowMsec/1000)
-	})
-});
 
 
 
@@ -140,7 +143,7 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 1.6, 1.8, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape';
-shape.position.set(-1.5, 1.4, 1);
+shape.position.set(-1.5, 0.9, 1);
 scene.add( shape );
 
 
@@ -151,7 +154,7 @@ var shape3 = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 2, 2.5, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape3';
-shape3.position.set(0.5, 1.8, -1);
+shape3.position.set(0.5, 0.9, -1);
 scene.add( shape3 );
 
 
@@ -162,7 +165,7 @@ var shape2 = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 1.8, 2.2, 4, 4 ),
     multiMaterial );
     renderer.domElement.id='shape2';
-shape2.position.set(2.5, 1.8, -3);
+shape2.position.set(2.5, 0.9, -3);
 scene.add( shape2 );
 
 
