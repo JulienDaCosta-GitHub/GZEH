@@ -15,7 +15,7 @@ var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.inner
 camera.position.z = 15; /*Valeur initiale 15 */
 //camera.position.y = 2; /*Valeur initiale 2 */
 
-/*_______________________Roation dans l'espace_____________________*/
+
 
 var scene, renderer, camera;
 var onRenderFcts= [];
@@ -39,24 +39,85 @@ function init2()
 
     camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
     camera.position.y = 2;
-    camera.position.z = 15;
-    camera.lookAt (new THREE.Vector3(0,0,0));
+    camera.position.z = 20;
+
+    /*Roation dans l'espace*/
+    camera.lookAt (new THREE.Vector3(1,0,0));
 
     controls = new THREE.OrbitControls (camera, renderer.domElement);
+
+    console.log(camera.position.z)
+    console.log(camera.position.y)
+
+
+    /*Control Orbit*/
+
+
+    controls.addEventListener('cameraChange', (event) => {
+        const { position, target } = event.camera;
+        // position & target in world space and instanceof THREE.Vector3
+    });
+
+// options with default values
+    controls.enabled = true; // enable / disable all interactions
+    controls.enableDamping = true; // enable / disable smooth transitions
+    controls.dampingFactor = 0.2; // smooth transition factor (<= 1). Move (targetState - currentState) * dampingFactor for each `controls.update` call
+    controls.dynamicTarget = false; // possible to zoom past the target (will move the target if you are closer than minDistance to the target)
+    controls.dollyFactor = 0.98; // zoom factor (when zooming one step the distance to the target will be distance = oldDistance * dollyFactor)
+
+
+    /*Contrôle du zoom */
+    controls.minDistance = 1; // minimum distance to the target (see also dynamicTarget)
+    controls.maxDistance = 50; // maximum distance to the target
+
+    /*contrôle de l'orbite sur l'axe "polaire" */
+    controls.minPolarAngle = 0; // minium polar angle around the target (radians)
+    controls.maxPolarAngle = 1.42; // maximum polar angle around the target (radians)
+
+    /*contrôle de l'orbite sur "l'équateur" */
+    controls.minAzimuthAngle = -1; // minimum azimuth angle around the target (radians)
+    controls.maxAzimuthAngle = 1; // maximum azimuth angle around the target (radians)
+
+    controls.enableKeyboardNavigation = true; // enable / disable keyboard navigation
+    controls.keyboardDollySpeed = 2; // using keyboard ('W' & 'S') will zoom equal to keyboardDollySpeed mouse wheel events
+    controls.keyboardPanSpeed = 10; // using keyboard ('A' & 'D') to pan will be equal to keyboardPanSpeed pixels mouse pan
+    controls.keyboardSpeedFactor = 3; // speed factor for keyboard navigation (pan & zoom) when 'shift' key is pressed
+    controls.firstPersonRotationFactor = 0.4; // rotation speed in first person mode
+
+    controls.pinchPanSpeed = 1; // pinch (touch) pan speed
+    controls.pinchEpsilon = 2; // minimum pixels change for pinch (touch & pan) to trigger pinch action
+    controls.pointerRotationSpeedPolar = Math.PI / 360; // rotation speed for touch in radians per pixel
+    controls.pointerRotationSpeedAzimuth = Math.PI / 360; // rotation speed for touch in radians per pixel
+
+    controls.keyboardRotationSpeedAzimuth = 10 * Math.PI / 360; // rotation speed for keyboard first person mode (arrow-keys).
+    controls.keyboardRotationSpeedPolar = 10 * Math.PI / 360; // rotation speed for keyboard first person mode (arrow-keys).
+
+    controls.minZoom = 0; // minimum zoom distance, only available when camera is orthographic
+    controls.maxZoom = 1; // maximum zoom distance, only available when camera is orthographic
+    controls.orthographicCameraDollyFactor = 0.3; // dolly factor of orthographic camera
+
+
 
 
     /* Jeu de lumières pour le fond de map */
 
-    scene.fog = new THREE.Fog(0x000, 0, 45);
-    ;(function(){
-    var light = new THREE.AmbientLight( 0x202020 )
+    scene.fog = new THREE.Fog( 0x000, 0, 63); //Valeurs initiales 0x000, 0, 45
+    (function(){
+    var light = new THREE.AmbientLight( 0x666666 ) //Valeurs initailes 0x202020
     scene.add( light )
-    var light = new THREE.DirectionalLight('white', 5)
-    light.position.set(0.5, 0.0, 2)
-    scene.add( light )
-    var light = new THREE.DirectionalLight('white', 0.75*2)
+
+    var light2 = new THREE.DirectionalLight('white', 5)
+    light.position.set(0.5, 0.0, 2 ) //Valeurs initiales 0.5, 0.0, 2
+
+    scene.add( light2 )
+
+   /* var light = new THREE.DirectionalLight('white', 0.75*2)
     light.position.set(-0.5, -0.5, -2)
     scene.add( light )
+
+    */
+
+
 })()
     var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
     THREEx.Terrain.simplexHeightMap(heightMap)
@@ -103,6 +164,7 @@ function init2()
 
 }
 
+/*Roation dans l'espace*/
 function animate()
 {
     controls.update();
@@ -110,15 +172,15 @@ function animate()
     renderer.render (scene, camera);
 }
 
+/*Fonction qui remet la caméra à sa posotion initiale au click du logo */
+function initialize() {
+    camera.position.y = 2;
+    camera.position.z = 20;
 
-/*_______________________ /Rotation dans l'espace _______________________*/
+}
 
 
-
-
-
-
-
+/*__________________AJOUT DES PYRAMIDES DANS LA SCENE_______*/
 
 
 /*Style des pyramides (texture, background)*/
@@ -205,16 +267,6 @@ scene.add( shape6 );
 
 
 
-/*
-
-camera.position.z = 16;
-camera.position.y = 3;
-camera.position.x =2;
-
- */
-
-/*
-
 /*Petites pyramides */
 
 // pyramid 4
@@ -250,40 +302,13 @@ scene.add( shape6 );
 
 
 
-/*
-function rotate() {
-    camera.position.z = 18;
-    camera.position.y = 3;
-    camera.position.x =2;
-
-    for(let i = 0 ; i<9 ; i++)
-    {
-        camera.position.z + i ;
-        camera.position.y + i ;
-        camera.position.x + i ;
-
-        console.log(i)
-
-
-    }
-
-    
-}
-
- */
 
 
 
 
 
+//_________________________________________________________Affichage Loader
 
-
-
-
-
-
-
-//Affichage Loader
 function showContent() {
     document.querySelector('.loader-container').classList.add('hidden');
     }
