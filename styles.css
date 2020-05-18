@@ -339,6 +339,8 @@ h3 {
           align-self: center;
           text-align: center;
         font-size: 3.5rem;
+        top: 10%;
+        
         
         font-family: 'ZCOOL XiaoWei', serif;
       }
@@ -348,7 +350,7 @@ h3 {
           position: fixed;
           display: flex;
           align-self: center;
-          margin-top: 5%;
+          top:20%;
         font-size: 2.5rem;
         color: #aaa;
         
