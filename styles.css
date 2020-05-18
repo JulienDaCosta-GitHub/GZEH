@@ -350,7 +350,7 @@ h3 {
           position: fixed;
           display: flex;
           align-self: center;
-          top:20%;
+          top:25%;
         font-size: 2.5rem;
         color: #aaa;
         
@@ -377,15 +377,15 @@ h3 {
             top: 325px;
           }
           .button4 {
-            left: 430px;
+            left: 450px;
             top: 575px;
           }
           .button5 {
-            left: 725px;
+            left: 740px;
             top: 575px; 
           }
           .button6{
-            left: 1000px;
+            left: 1030px;
             top: 575px;
           }
           .show1 {
