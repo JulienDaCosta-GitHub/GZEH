@@ -1,29 +1,26 @@
-/**
- * @author qiao / https://github.com/qiao
- * @author mrdoob / http://mrdoob.com
- * @author alteredq / http://alteredqualia.com/
- * @author WestLangley / http://github.com/WestLangley
- */
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
 
-THREE.OrbitControls = function ( object, domElement ) {
+var scene = new THREE.Scene();
 
-	this.object = object;
-	this.domElement = ( domElement !== undefined ) ? domElement : document;
+var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 
-	// API
+var controls = new OrbitControls( camera, renderer.domElement );
 
-	this.enabled = true;
+//controls.update() must be called after any manual changes to the camera's transform
+camera.position.set( 0, 20, 100 );
+controls.update();
 
-	this.center = new THREE.Vector3();
+function animate() {
 
-	this.userZoom = true;
-	this.userZoomSpeed = 1.0;
+    requestAnimationFrame( animate );
 
-	this.userRotate = true;
-	this.userRotateSpeed = 1.0;
+    // required if controls.enableDamping or controls.autoRotate are set to true
+    controls.update();
 
-	this.userPan = true;
-	this.userPanSpeed = 2.0;
+    renderer.render( scene, camera );
+
 
 	this.autoRotate = false;
 	this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
@@ -401,3 +398,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 };
 
 THREE.OrbitControls.prototype = Object.create( THREE.EventDispatcher.prototype );
+
+}
+
