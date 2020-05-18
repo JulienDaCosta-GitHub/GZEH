@@ -233,3 +233,75 @@ function rotate() {
 
 
 
+//Affichage Loader
+function showContent() {
+    document.querySelector('.loader-container').classList.add('hidden');
+    }
+    setTimeout(showContent,6250)
+    
+    class TypeWriter {
+        constructor(txtElement, words,) {
+          this.txtElement = txtElement;
+          this.words = words;
+          this.txt = '';
+          this.wordIndex = 0;
+          this.type();
+          this.isDeleting = false;
+        }
+      
+        type() {
+          // Mot acutuel dans l'index
+          const current = this.wordIndex % this.words.length;
+          // Recuparation du text complet actuel
+          const fullTxt = this.words[current];
+      
+          // verifier si il aucun mot n'est ecrit
+          if(this.isDeleting) {
+            // Suppression des caractere  
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+            // ajouté les caractere 
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+      
+          // Insersion du Texte dans l'element 
+          this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+      
+          // Vitesse d'ecriture 
+          let typeSpeed = 110;
+      
+          if(this.isDeleting) {
+            typeSpeed /= 1;
+          }
+      
+          // Si le mot est complet
+          if(!this.isDeleting && this.txt === fullTxt) {
+            // marque une pause a la fin
+            typeSpeed = this.wait;
+            // changer la valeur de suppresion a true 
+            this.isDeleting = true;
+          } else if(this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            // Passer au mot suivant
+            this.wordIndex++;
+            // pause avant l'ecriture
+            typeSpeed = 500;
+          }
+      
+          setTimeout(() => this.type(), typeSpeed);
+        }
+      }
+      
+      
+      // Init On DOM Load
+      document.addEventListener('DOMContentLoaded', init);
+      
+      // Init App
+      function init() {
+        const txtElement = document.querySelector('.txt-type');
+        const words = JSON.parse(txtElement.getAttribute('data-words'));
+        const wait = txtElement.getAttribute('data-wait');
+        // Init TypeWriter
+        new TypeWriter(txtElement, words, wait);
+      }
+    
