@@ -37,7 +37,7 @@ function init2()
 
 
 
-    camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 10000);
+    camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
     camera.position.y = 2;
     camera.position.z = 15;
     camera.lookAt (new THREE.Vector3(0,0,0));
