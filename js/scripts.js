@@ -1,5 +1,5 @@
 /*_________________*/
-var renderer	= new THREE.WebGLRenderer({
+/*var renderer	= new THREE.WebGLRenderer({
 	antialias	: true
 });
 
@@ -7,68 +7,112 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 
 
 document.body.appendChild( renderer.domElement );
-var onRenderFcts= [];
+
 var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
 camera.position.z = 15; /*Valeur initiale 15 */
-camera.position.y = 2; /*Valeur initiale 2 */
+//camera.position.y = 2; /*Valeur initiale 2 */
+
+/*_______________________Roation dans l'espace_____________________*/
+
+var scene, renderer, camera;
+var onRenderFcts= [];
+var controls;
+
+init2();
+animate();
+
+function init2()
+{
+    renderer = new THREE.WebGLRenderer( {antialias:true} );
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize (width, height);
+    document.body.appendChild (renderer.domElement);
+
+
+    scene = new THREE.Scene();
 
 
 
-/* Jeu de lumières pour le fond de map */
+    camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
+    camera.position.y = 2;
+    camera.position.z = 15;
+    camera.lookAt (new THREE.Vector3(0,0,0));
 
-scene.fog = new THREE.Fog(0x000, 0, 45);
-;(function(){
-	var light = new THREE.AmbientLight( 0x202020 )
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 5)
-	light.position.set(0.5, 0.0, 2)
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 0.75*2)
-	light.position.set(-0.5, -0.5, -2)
-	scene.add( light )		
+    controls = new THREE.OrbitControls (camera, renderer.domElement);
+
+
+    /* Jeu de lumières pour le fond de map */
+
+    scene.fog = new THREE.Fog(0x000, 0, 45);
+    ;(function(){
+    var light = new THREE.AmbientLight( 0x202020 )
+    scene.add( light )
+    var light = new THREE.DirectionalLight('white', 5)
+    light.position.set(0.5, 0.0, 2)
+    scene.add( light )
+    var light = new THREE.DirectionalLight('white', 0.75*2)
+    light.position.set(-0.5, -0.5, -2)
+    scene.add( light )
 })()
-var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
-THREEx.Terrain.simplexHeightMap(heightMap)	
-var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
-THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
+    var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
+    THREEx.Terrain.simplexHeightMap(heightMap)
+    var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
+    THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
 
-/* Materiel appliqué a notre élément mesh */
+    /* Materiel appliqué a notre élément mesh */
 
-var material = new THREE.MeshBasicMaterial({
-	wireframe: true
-});
-var mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
-mesh.lookAt(new THREE.Vector3(0,1,0));
+    var material = new THREE.MeshBasicMaterial({
+        wireframe: true
+    });
+    var mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+    mesh.lookAt(new THREE.Vector3(0,1,0));
 
-/* Taille */
+    /* Taille */
 
-mesh.scale.y = 8.5;
-mesh.scale.x = 10.8;
-mesh.scale.z = 0.08;
-mesh.scale.multiplyScalar(10);
+    mesh.scale.y = 8.5;
+    mesh.scale.x = 10.8;
+    mesh.scale.z = 0.08;
+    mesh.scale.multiplyScalar(10);
 
-/* Tourner la caméra si souhaité */
+    /* Tourner le sol si souhaité */
 
-onRenderFcts.push(function(delta, now){
-	mesh.rotation.z += 0.0 * delta;
-})
-onRenderFcts.push(function(){
-	renderer.render( scene, camera );		
-})
-var lastTimeMsec= null
-requestAnimationFrame(function animate(nowMsec){
-	requestAnimationFrame( animate );
-	lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
-	var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
-	lastTimeMsec	= nowMsec
-	onRenderFcts.forEach(function(onRenderFct){
-		onRenderFct(deltaMsec/1000, nowMsec/1000)
-	})
-});
+    onRenderFcts.push(function(delta, now){
+        mesh.rotation.z += 0.0 * delta;
+    })
+    onRenderFcts.push(function(){
+        renderer.render( scene, camera );
+    })
+    var lastTimeMsec= null
+    requestAnimationFrame(function animate(nowMsec){
+        requestAnimationFrame( animate );
+        lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
+        var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
+        lastTimeMsec	= nowMsec
+        onRenderFcts.forEach(function(onRenderFct){
+            onRenderFct(deltaMsec/1000, nowMsec/1000)
+        })
+    });
+
+
+
+
+}
+
+function animate()
+{
+    controls.update();
+    requestAnimationFrame ( animate );
+    renderer.render (scene, camera);
+}
+
+
+/*_______________________ /Rotation dans l'espace _______________________*/
+
 
 
 
@@ -202,12 +246,15 @@ scene.add( shape6 );
 
 
 
-/*
 
+
+
+
+/*
 function rotate() {
-    camera.position.z = 16;
+    camera.position.z = 18;
     camera.position.y = 3;
-    camera.position.x =0;
+    camera.position.x =2;
 
     for(let i = 0 ; i<9 ; i++)
     {
@@ -224,6 +271,8 @@ function rotate() {
 }
 
  */
+
+
 
 
 
