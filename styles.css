@@ -213,8 +213,9 @@ overflow: hidden;
     text-align: center;
     flex-direction: column;
 }
-h1 {
+h3 {
     font-family: 'Cinzel', serif;
+    font-size: 200%;
 }
 
 
@@ -279,7 +280,9 @@ h1 {
       }
       
       h1 {
-          position: flex;
+          position: fixed;
+          display: flex;
+          align-self: center;
           text-align: center;
         font-size: 3.5rem;
         
@@ -288,7 +291,10 @@ h1 {
       
       h2 {
           text-align: center;
-          position: flex;
+          position: fixed;
+          display: flex;
+          align-self: center;
+          margin-top: 5%;
         font-size: 2.5rem;
         color: #aaa;
         
