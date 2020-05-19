@@ -1,22 +1,3 @@
-/*_________________*/
-/*var renderer	= new THREE.WebGLRenderer({
-	antialias	: true
-});
-
-renderer.setSize( window.innerWidth, window.innerHeight );
-
-
-document.body.appendChild( renderer.domElement );
-
-var scene	= new THREE.Scene();
-var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
-
-
-camera.position.z = 15; /*Valeur initiale 15 */
-//camera.position.y = 2; /*Valeur initiale 2 */
-
-
-
 var scene, renderer, camera;
 var onRenderFcts= [];
 var controls;
@@ -111,15 +92,8 @@ function init2()
     light.position.set(0.5, 0.0, 2 ) //Valeurs initiales 0.5, 0.0, 2
 
     scene.add( light2 )
-
-   /* var light = new THREE.DirectionalLight('white', 0.75*2)
-    light.position.set(-0.5, -0.5, -2)
-    scene.add( light )
-
-    */
-
-
 })()
+
     var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
     THREEx.Terrain.simplexHeightMap(heightMap)
     var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
@@ -178,7 +152,7 @@ function animate()
 function initialize() {
   camera.position.y = 2;
   camera.position.z = 30;
-  camera.position.x=15;
+  camera.position.x = 15;
 
 }
 
@@ -194,12 +168,7 @@ var darkMaterial = new THREE.MeshBasicMaterial( {map: Texture} );
 var wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0, wireframe: true, transparent: true } );
 var multiMaterial = [ darkMaterial, wireframeMaterial ];
 
-/*
-var shape = THREE.SceneUtils.createMultiMaterialObject(new THREE.TetrahedronGeometry( 1, 0 ), multiMaterial );
-shape.position.set(2, 1, 1);
-scene.add( shape );
 
- */
 /*Grandes pyramides */
 
 // pyramid
@@ -208,7 +177,6 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 2, 2, 4, 4 ),
 	multiMaterial );
-	renderer.domElement.id='shape';
 shape.position.set(2, 1, 12);
 
 scene.add( shape );
@@ -220,7 +188,6 @@ var shape3 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 4, 3.5, 4, 4 ),
 	multiMaterial );
-	renderer.domElement.id='shape3';
 shape3.position.set(0, 1.7, 0 );
 scene.add( shape3 );
 
@@ -231,7 +198,6 @@ var shape2 = THREE.SceneUtils.createMultiMaterialObject(
 	
 	new THREE.CylinderGeometry( 0, 3.5, 3, 4, 4 ),
     multiMaterial );
-    renderer.domElement.id='shape2';
 shape2.position.set(0, 1.5, -10);
 scene.add( shape2 );
 
@@ -244,7 +210,6 @@ var shape4 = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 0.5, 0.4, 4, 4 ),
 
 	multiMaterial );
-	renderer.domElement.id='shape4';
 shape4.position.set(3, 0.29, 17);
 scene.add( shape4 );
 
@@ -253,7 +218,6 @@ var shape5 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.5, 0.4, 4, 4 ),
 	multiMaterial );
-	renderer.domElement.id='shape5';
 shape5.position.set(5, 0.29, 15);
 scene.add( shape5 );
 
@@ -262,19 +226,8 @@ var shape6 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.5, 0.4, 4, 4 ),
 	multiMaterial );
-	renderer.domElement.id='shape6';
 shape6.position.set(4, 0.29, 16);
 scene.add( shape6 );
-
-
-
-
-
-
-
-
-
-
 
 
 //_________________________________________________________Affichage Loader
