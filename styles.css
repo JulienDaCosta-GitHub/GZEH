@@ -450,3 +450,84 @@ h3 {
             top: 300px;
           }
       }
+
+
+/* RESPONSIVE MAC*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .button1 {
+        left: 378px;
+        top: 372px;
+       /*font-size: 110%;*/
+    }
+    .button2 {
+        left: 690px;
+        top: 192px;
+        /*font-size: 110%;*/
+
+    }
+    .button3 {
+        left: 880px;
+        top: 192px;
+       /* font-size: 110%;*/
+
+    }
+    .button4 {
+        left: 168px;
+        top: 593px;
+        /*font-size: 110%;*/
+
+    }
+    .button5 {
+        left: 320px;
+        top: 584px;
+        /*font-size: 110%;*/
+
+    }
+    .button6{
+        left: 466px;
+        top: 575px;
+        /*font-size: 110%;*/
+
+    }
+
+
+
+    .show1 {
+        left: 510px;
+        top: 150px;
+    }
+    .show2 {
+        left: 810px;
+    }
+    .show3 {
+        left: 988px;
+    }
+    .show4{
+        left: 194px;
+        top: 366px;
+    }
+    .show5 {
+        left: 370px;
+        top: 370px;
+
+    }
+    .show6 {
+        left: 540px;
+        top: 370px;
+    }
+
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+
+}
