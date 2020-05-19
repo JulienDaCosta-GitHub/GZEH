@@ -237,12 +237,48 @@ scene.add( shape2 );
 
 
 
+/*Petites pyramides
+
+// pyramid 4
+var shape4 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape4';
+shape4.position.set(-1, 1.5, 10.5);
+scene.add( shape4 );
+
+// pyramid 5
+var shape5 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape5';
+shape5.position.set(-0.4, 1.5, 10.5);
+scene.add( shape5 );
+
+// pyramid 6
+var shape6 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape6';
+shape6.position.set(0.2, 1.5, 10.5);
+scene.add( shape6 );
+
+ */
+
+
+
+
 /*Petites pyramides */
 
 // pyramid 4
 var shape4 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 0.5, 0.4, 4, 4 ),
+
 	multiMaterial );
 	renderer.domElement.id='shape4';
 shape4.position.set(3, 0.29, 17);
