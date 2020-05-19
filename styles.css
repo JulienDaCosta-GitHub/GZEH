@@ -369,12 +369,7 @@ p {
       top:0;
       left: 0;
     }
-      
-    h1, h2 {
-      font-weight: 200;
-      color: white;
-    }
-      
+  
     h1 {
       position: fixed;
       display: flex;
@@ -382,12 +377,14 @@ p {
       text-align: center;
       font-size: 3.5rem;
       top:42%;
+      
+      font-weight: 200;
+      color: white;
       font-family: 'ZCOOL XiaoWei', serif;
     }
 
-    .txt-type > .txt {
-        border-right: 0.2rem solid #777;
-    }
+  
+    
 
 /* Résolution 1920x1080 */
 @media all and (min-width: 1024px) and (max-width: 1920px){
