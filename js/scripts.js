@@ -209,7 +209,7 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	new THREE.CylinderGeometry( 0, 2, 2, 4, 4 ),
 	multiMaterial );
 	renderer.domElement.id='shape';
-shape.position.set(2, 0.9, 12);
+shape.position.set(2, 1, 12);
 
 scene.add( shape );
 
@@ -234,45 +234,6 @@ var shape2 = THREE.SceneUtils.createMultiMaterialObject(
     renderer.domElement.id='shape2';
 shape2.position.set(0, 1.5, -10);
 scene.add( shape2 );
-
-
-
-
-
-
-/*Petites pyramides
-
-// pyramid 4
-var shape4 = THREE.SceneUtils.createMultiMaterialObject(
-	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-
-	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
-	multiMaterial );
-	renderer.domElement.id='shape4';
-shape4.position.set(-1, 1.5, 10.5);
-scene.add( shape4 );
-
-// pyramid 5
-var shape5 = THREE.SceneUtils.createMultiMaterialObject(
-	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
-	multiMaterial );
-	renderer.domElement.id='shape5';
-shape5.position.set(-0.4, 1.5, 10.5);
-scene.add( shape5 );
-
-// pyramid 6
-var shape6 = THREE.SceneUtils.createMultiMaterialObject(
-	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
-	multiMaterial );
-	renderer.domElement.id='shape6';
-shape6.position.set(0.2, 1.5, 10.5);
-scene.add( shape6 );
-
- */
-
-
 
 
 /*Petites pyramides */
@@ -334,12 +295,12 @@ function showContent() {
         }
       
         type() {
-          // Mot acutuel dans l'index
+          // Mot actuel dans l'index
           const current = this.wordIndex % this.words.length;
-          // Recuparation du text complet actuel
+          // Recuperation du text complet actuel
           const fullTxt = this.words[current];
       
-          // verifier si il aucun mot n'est ecrit
+          // verifier si aucun mot n'est ecrit
           if(this.isDeleting) {
             // Suppression des caractere  
             this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -390,8 +351,10 @@ function showContent() {
       }
 
       
+//_________________________________________________________Affichage Mode Exploration et Découverte 
 
-///TEST CONTROL 
+
+///EXPLORATION
 
 
 
@@ -401,7 +364,9 @@ function showContent() {
     }
   );
 
-  
+  // DISCOVERY 
+
+
   document.getElementById('lock').addEventListener ("click",function(){
     var lock =new THREE.Vector3(controls.enabled=false);
     camera.position.y = 2;
