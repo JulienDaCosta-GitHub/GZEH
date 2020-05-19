@@ -282,7 +282,7 @@ scene.add( shape6 );
 function showContent() {
     document.querySelector('.loader-container').classList.add('hidden');
     }
-    setTimeout(showContent,6250)
+    setTimeout(showContent,3000)
     
     class TypeWriter {
         constructor(txtElement, words,) {

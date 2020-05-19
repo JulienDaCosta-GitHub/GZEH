@@ -335,8 +335,8 @@ h3 {
     }
     .loader{
     
-    width: 120px;
-    height: 120px;
+    width: 360px;
+    height: 360px;
     border: 16px solid grey;
     border-radius: 50%;
     border-top: 16px solid white;
@@ -396,24 +396,24 @@ h3 {
           align-self: center;
           text-align: center;
         font-size: 3.5rem;
-        top: 10%;
+        top:42%;
         
         
         font-family: 'ZCOOL XiaoWei', serif;
       }
-      
+      /*
       h2 {
           text-align: center;
           position: fixed;
           display: flex;
           align-self: center;
-          top:25%;
+          top:75%;
         font-size: 2.5rem;
         color: #aaa;
         
         font-family: 'Neucha', cursive;
       }
-      
+      */
       
       .txt-type > .txt {
         border-right: 0.2rem solid #777;
