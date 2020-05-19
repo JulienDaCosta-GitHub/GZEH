@@ -230,7 +230,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 			if ( event.button === 1 )
 				state = STATE.ZOOM;
 			if ( event.button === 2 )
-				state = STATE.PAN;
+				state = STATE.ROTATE;
 		}
 		
 		
@@ -246,7 +246,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 			zoomStart.set( event.clientX, event.clientY );
 
-		} else if ( state === STATE.PAN ) {
+		} else if ( state === STATE.ROTATE ) {
 
 			//state = STATE.PAN;
 
@@ -292,7 +292,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 			zoomStart.copy( zoomEnd );
 
-		} else if ( state === STATE.PAN ) {
+		} else if ( state === STATE.ROTATE ) {
 
 			var movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
 			var movementY = event.movementY || event.mozMovementY || event.webkitMovementY || 0;
@@ -371,7 +371,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 				state = STATE.ZOOM;
 				break;
 			case scope.keys.PAN:
-				state = STATE.PAN;
+				state = STATE.ROTATE;
 				break;
 				
 		}
