@@ -146,7 +146,7 @@ overflow: hidden;
     color: gray;
 }
 .button6 {
-    left: 800px;
+    left: 800pxyy;
     top: 450px;
     position: absolute;
     background-color: rgba(125,125,125,0);
@@ -158,6 +158,35 @@ overflow: hidden;
 }
 .button6:hover {
     color: gray;
+}
+
+.button7 {
+  left: 800pxyy;
+  top: 450px;
+  position: absolute;
+  background-color: rgba(125,125,125,0);
+  border-color: rgba(125,125,125,0);
+  color: white;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  transition: 0.5s all ease;
+}
+.button7:hover {
+  color: gray;
+}
+.button8 {
+  left: 800pxyy;
+  top: 470px;
+  position: absolute;
+  background-color: rgba(125,125,125,0);
+  border-color: rgba(125,125,125,0);
+  color: white;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  transition: 0.5s all ease;
+}
+.button8:hover {
+  color: gray;
 }
 
 .text2 {
@@ -316,7 +345,16 @@ h3 {
     visibility: hidden;
     
     }
+    .content{
 
+      opacity: 100;
+      visibility: visible;
+    }
+    .content.hidden{
+
+      opacity:0;
+      visibility: hidden;
+    }
     .container {
         display: flex;
         flex-direction: column;

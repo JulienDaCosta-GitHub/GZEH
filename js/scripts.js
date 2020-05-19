@@ -35,7 +35,7 @@ function init2()
 
     scene = new THREE.Scene();
 
-
+    
 
     camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
     camera.position.y = 2;
@@ -46,13 +46,13 @@ function init2()
     camera.lookAt (new THREE.Vector3(1,0,0));
 
     controls = new THREE.OrbitControls (camera, renderer.domElement);
-
+    
     console.log(camera.position.z)
     console.log(camera.position.y)
 
 
     /*Control Orbit*/
-
+   
 
     controls.addEventListener('cameraChange', (event) => {
         const { position, target } = event.camera;
@@ -60,7 +60,7 @@ function init2()
     });
 
 // options with default values
-    controls.enabled = true; // enable / disable all interactions
+    controls.enabled = false; // enable / disable all interactions
     controls.enableDamping = true; // enable / disable smooth transitions
     controls.dampingFactor = 0.2; // smooth transition factor (<= 1). Move (targetState - currentState) * dampingFactor for each `controls.update` call
     controls.dynamicTarget = false; // possible to zoom past the target (will move the target if you are closer than minDistance to the target)
@@ -165,6 +165,7 @@ function init2()
 
 }
 
+
 /*Roation dans l'espace*/
 function animate()
 {
@@ -175,8 +176,9 @@ function animate()
 
 /*Fonction qui remet la caméra à sa posotion initiale au click du logo */
 function initialize() {
-    camera.position.y = 2;
-    camera.position.z = 20;
+  camera.position.y = 2;
+  camera.position.z = 30;
+  camera.position.x=15;
 
 }
 
@@ -386,4 +388,30 @@ function showContent() {
         // Init TypeWriter
         new TypeWriter(txtElement, words, wait);
       }
+
+      
+
+///TEST CONTROL 
+
+
+
+  document.getElementById('unlock').addEventListener ("click",function(){
+    var lock =new THREE.Vector3(controls.enabled=true);
+    camera.position.y = 2;
+    camera.position.z = 30;
+    camera.position.x=15;
+    document.querySelector('.content').classList.add('hidden');
     
+  }
+  );
+
+  
+  document.getElementById('lock').addEventListener ("click",function(){
+    var lock =new THREE.Vector3(controls.enabled=false);
+    camera.position.y = 2;
+    camera.position.z = 30;
+    camera.position.x=15;
+    document.querySelector('.content').classList.remove('hidden');
+    
+  }
+  );
