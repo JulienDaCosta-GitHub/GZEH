@@ -397,12 +397,8 @@ function showContent() {
 
   document.getElementById('unlock').addEventListener ("click",function(){
     var lock =new THREE.Vector3(controls.enabled=true);
-    camera.position.y = 2;
-    camera.position.z = 30;
-    camera.position.x=15;
     document.querySelector('.content').classList.add('hidden');
-    
-  }
+    }
   );
 
   
@@ -410,8 +406,7 @@ function showContent() {
     var lock =new THREE.Vector3(controls.enabled=false);
     camera.position.y = 2;
     camera.position.z = 30;
-    camera.position.x=15;
+    camera.position.x = 15;
     document.querySelector('.content').classList.remove('hidden');
-    
-  }
+    }
   );
