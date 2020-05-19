@@ -137,8 +137,8 @@ function init2()
     /* Taille */
 
     mesh.scale.y = 8.5;
-    mesh.scale.x = 10.8;
-    mesh.scale.z = 0.01;
+    mesh.scale.x = 8.5;
+    mesh.scale.z = 0.03;
     mesh.scale.multiplyScalar(10);
 
     /* Tourner le sol si souhaité */
