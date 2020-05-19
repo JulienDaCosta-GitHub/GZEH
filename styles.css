@@ -339,7 +339,6 @@ p {
   }
     
     @keyframes loader {
-    
     0%{
       transform: translate(-50%, -50%) rotate(0deg);
       }
@@ -351,6 +350,8 @@ p {
     opacity: 0;
     visibility: hidden;
     }
+
+
     .content{
       opacity: 100;
       visibility: visible;
@@ -359,6 +360,8 @@ p {
       opacity:0;
       visibility: hidden;
     }
+
+    
     .container {
       display: flex;
       flex-direction: column;
