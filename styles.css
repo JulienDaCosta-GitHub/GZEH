@@ -419,8 +419,8 @@ h3 {
         border-right: 0.2rem solid #777;
       }
 
-
-      @media (max-width: 1920px) and (max-height: 1080px) {
+/* Résolution 1920x1080 */
+@media all and (min-width: 1024px) and (max-width: 1920px){
           .button1 {
             left: 555px;
             top: 430px;
@@ -480,8 +480,67 @@ h3 {
             top: 405px;
           }
       }
+/* Résolution 2560x1440 */
+@media all and (min-width: 2000px) and (max-width: 2560px)  {
+  .button1 {
+    left: 750px;
+    top: 590px;
+  }
+  .button2 {
+    left: 1250px;
+    top: 315px;
+  }
+  .button3 {
+    left: 1550px;
+    top: 320px
+  }
+  .button4 {
+    left: 410px;
+    top: 960px;
+  }
+  .button5 {
+    left: 660px;
+    top: 940px; 
+  }
+  .button6{
+    left: 890px;
+    top: 920px;
+  }
 
+  .button7 {
+    left: 20px;
+    top: 450px;
+  }
 
+  .button8 {
+    left: 20px;
+    top: 500px;
+  }
+
+  .show1 {
+    left: 385px;
+    top: 175px;
+  }
+  .show2 {
+    left: 500px;
+  }
+  .show3 {
+    left: 1300px;
+  }
+  .show4{
+    left: 170px;
+    top: 425px;
+  }
+  .show5 {
+    left: 295px;
+    top: 415px;
+
+  }
+  .show6 {
+    left: 465px;
+    top: 405px;
+  }
+}
 /* RESPONSIVE MAC*/
 /* ----------- Non-Retina Screens ----------- */
 @media screen
@@ -559,68 +618,5 @@ and (min-device-width: 1200px)
 and (max-device-width: 1600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (min-resolution: 192dpi) {
-
-    .button1 {
-        left: 378px;
-        top: 372px;
-        /*font-size: 110%;*/
-    }
-    .button2 {
-        left: 690px;
-        top: 192px;
-        /*font-size: 110%;*/
-
-    }
-    .button3 {
-        left: 880px;
-        top: 192px;
-        /* font-size: 110%;*/
-
-    }
-    .button4 {
-        left: 168px;
-        top: 593px;
-        /*font-size: 110%;*/
-
-    }
-    .button5 {
-        left: 320px;
-        top: 584px;
-        /*font-size: 110%;*/
-
-    }
-    .button6{
-        left: 466px;
-        top: 575px;
-        /*font-size: 110%;*/
-
-    }
-
-
-
-    .show1 {
-        left: 510px;
-        top: 150px;
-    }
-    .show2 {
-        left: 810px;
-    }
-    .show3 {
-        left: 988px;
-    }
-    .show4{
-        left: 194px;
-        top: 366px;
-    }
-    .show5 {
-        left: 370px;
-        top: 370px;
-
-    }
-    .show6 {
-        left: 540px;
-        top: 370px;
-    }
-
 
 }
