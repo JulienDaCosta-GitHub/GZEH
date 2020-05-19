@@ -83,7 +83,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
-    animation-duration: 0.5s;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button1:hover {
@@ -98,6 +99,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button2:hover {
@@ -112,6 +115,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button3:hover {
@@ -126,6 +131,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button4:hover {
@@ -140,6 +147,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button5:hover {
@@ -154,6 +163,8 @@ overflow: hidden;
     color: white;
     cursor: pointer;
     font-family: 'Cinzel', serif;
+    background-color: black;
+    border-radius: 20px;
     transition: 0.5s all ease;
 }
 .button6:hover {
@@ -161,7 +172,7 @@ overflow: hidden;
 }
 
 .button7 {
-  left: 800pxyy;
+  left: 20px;
   top: 450px;
   position: absolute;
   background-color: rgba(125,125,125,0);
@@ -169,20 +180,24 @@ overflow: hidden;
   color: white;
   cursor: pointer;
   font-family: 'Cinzel', serif;
+  background-color: black;
+  border-radius: 20px;
   transition: 0.5s all ease;
 }
 .button7:hover {
   color: gray;
 }
 .button8 {
-  left: 800pxyy;
-  top: 470px;
+  left: 20px;
+  top: 500px;
   position: absolute;
   background-color: rgba(125,125,125,0);
   border-color: rgba(125,125,125,0);
   color: white;
   cursor: pointer;
   font-family: 'Cinzel', serif;
+  background-color: black;
+  border-radius: 20px;
   transition: 0.5s all ease;
 }
 .button8:hover {
@@ -403,51 +418,62 @@ h3 {
 
       @media (max-width: 1920px) and (max-height: 1080px) {
           .button1 {
-            left: 685px;
-            top: 400px;
+            left: 555px;
+            top: 430px;
           }
           .button2 {
-            left: 1000px;
-            top: 300px;
+            left: 930px;
+            top: 225px;
           }
           .button3 {
-            left: 1220px;
-            top: 325px;
+            left: 1152px;
+            top: 230px;
           }
           .button4 {
-            left: 450px;
-            top: 575px;
+            left: 305px;
+            top: 705px;
           }
           .button5 {
-            left: 740px;
-            top: 575px; 
+            left: 485px;
+            top: 695px; 
           }
           .button6{
-            left: 1030px;
-            top: 575px;
+            left: 660px;
+            top: 680px;
           }
+
+          .button7 {
+            left: 20px;
+            top: 450px;
+          }
+
+          .button8 {
+            left: 20px;
+            top: 500px;
+          }
+
           .show1 {
-            left: 510px;
-            top: 150px;
+            left: 385px;
+            top: 175px;
           }
           .show2 {
-            left: 810px;
+            left: 500px;
           }
           .show3 {
-            left: 1050px;
+            left: 1300px;
           }
           .show4{
-            left: 270px;
-            top: 300px;
+            left: 170px;
+            top: 425px;
           }
           .show5 {
-            left: 550px;
-            top: 300px;
+            left: 295px;
+            top: 415px;
         
           }
           .show6 {
-            left: 850px;
-            top: 300px;
+            left: 465px;
+            top: 405px;
           }
       }
 
