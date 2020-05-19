@@ -277,8 +277,6 @@ scene.add( shape6 );
 // pyramid 4
 var shape4 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
-	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
-
 	new THREE.CylinderGeometry( 0, 0.5, 0.4, 4, 4 ),
 
 	multiMaterial );
