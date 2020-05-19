@@ -92,7 +92,7 @@ function init2()
     light.position.set(0.5, 0.0, 2 ) //Valeurs initiales 0.5, 0.0, 2
 
     scene.add( light2 )
-})()
+    })()
 
     var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
     THREEx.Terrain.simplexHeightMap(heightMap)
