@@ -114,29 +114,6 @@ function init2()
     mesh.scale.x = 8.5;
     mesh.scale.z = 0.03;
     mesh.scale.multiplyScalar(10);
-
-    /* Tourner le sol si souhaité */
-
-    onRenderFcts.push(function(delta, now){
-        mesh.rotation.z += 0.0 * delta;
-    })
-    onRenderFcts.push(function(){
-        renderer.render( scene, camera );
-    })
-    var lastTimeMsec= null
-    requestAnimationFrame(function animate(nowMsec){
-        requestAnimationFrame( animate );
-        lastTimeMsec	= lastTimeMsec || nowMsec-1000/60
-        var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec)
-        lastTimeMsec	= nowMsec
-        onRenderFcts.forEach(function(onRenderFct){
-            onRenderFct(deltaMsec/1000, nowMsec/1000)
-        })
-    });
-
-
-
-
 }
 
 
