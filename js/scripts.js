@@ -235,7 +235,7 @@ scene.add( shape2 );
 
 
 
-/*Petites pyramides */
+/*Petites pyramides
 
 // pyramid 4
 var shape4 = THREE.SceneUtils.createMultiMaterialObject(
@@ -263,6 +263,8 @@ var shape6 = THREE.SceneUtils.createMultiMaterialObject(
 	renderer.domElement.id='shape6';
 shape6.position.set(0.2, 1.5, 10.5);
 scene.add( shape6 );
+
+ */
 
 
 
