@@ -13,43 +13,33 @@ body{
 
 
 .topnav {
-
-   /* background-color: black; */
-overflow: hidden;
-    /* border-bottom: 1px solid white; */
-    display: flex;
-    justify-content: space-between;
-    /* justify-content: center; */
-    position: absolute;
-    width: 100%;
+  /* background-color: black; */
+  overflow: hidden;
+  /* border-bottom: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  position: absolute;
+  width: 100%;
 }
 
-.topnav span
-{
+.topnav span {
     color : white;
     font-family: 'Roboto';
     margin-top: auto;
-
 }
 
-
-
-.right-white
-{
+.right-white {
     margin-top: 50vh;
     margin-left: 80vw;
     position: absolute;
 }
 
-.left-white
-{
+.left-white {
     margin-top: 50vh;
     margin-right: 50vw;
     position: absolute;
 }
-
-
-
 
 .topnav img {
     height: 36px;
