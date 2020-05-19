@@ -101,7 +101,7 @@ function init2()
 
     /* Jeu de lumières pour le fond de map */
 
-    scene.fog = new THREE.Fog( 0x000, 0, 63); //Valeurs initiales 0x000, 0, 45
+    scene.fog = new THREE.Fog( 0x000, 0, 100); //Valeurs initiales 0x000, 0, 45
     (function(){
     var light = new THREE.AmbientLight( 0x666666 ) //Valeurs initailes 0x202020
     scene.add( light )
