@@ -50,6 +50,15 @@ body{
     -webkit-transform-style: preserve-3d;
     -webkit-animation: spin 8s infinite linear;
 
+
+
+
+
+.topnav img {
+    position: fixed;
+    height: 36px;
+    margin: 2% 2%;
+
 }
 
 .pyramid-wall {
@@ -194,3 +203,53 @@ body{
 
 
 
+
+      @media (max-width: 1920px) and (max-height: 1080px) {
+          .button1 {
+            left: 685px;
+            top: 400px;
+          }
+          .button2 {
+            left: 1000px;
+            top: 300px;
+          }
+          .button3 {
+            left: 1220px;
+            top: 325px;
+          }
+          .button4 {
+            left: 450px;
+            top: 575px;
+          }
+          .button5 {
+            left: 740px;
+            top: 575px; 
+          }
+          .button6{
+            left: 1030px;
+            top: 575px;
+          }
+          .show1 {
+            left: 510px;
+            top: 150px;
+          }
+          .show2 {
+            left: 810px;
+          }
+          .show3 {
+            left: 1050px;
+          }
+          .show4{
+            left: 270px;
+            top: 300px;
+          }
+          .show5 {
+            left: 550px;
+            top: 300px;
+        
+          }
+          .show6 {
+            left: 850px;
+            top: 300px;
+          }
+      }

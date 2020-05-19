@@ -13,6 +13,31 @@ var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
+camera.position.z = 15; /*Valeur initiale 15 */
+//camera.position.y = 2; /*Valeur initiale 2 */
+
+/*_______________________Rotation dans l'espace_____________________*/
+
+var scene, renderer, camera;
+var onRenderFcts= [];
+var controls;
+
+
+init2();
+animate();
+
+function init2()
+{
+    renderer = new THREE.WebGLRenderer( {antialias:true} );
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize (width, height);
+    document.body.appendChild (renderer.domElement);
+
+
+    scene = new THREE.Scene();
+
+
 
 camera.position.z = 0;
 camera.position.y = 0;
@@ -28,6 +53,7 @@ var animate = () =>{
 
     shape2.rotation.x += 0.1;
     shape2.rotation.y += 0.1;
+
 }
 
 
@@ -36,19 +62,24 @@ var animate = () =>{
 
 /* Jeu de lumières pour le fond de map */
 
+
+
+
 scene.fog = new THREE.Fog(0x000, 0, 45);
-;(function(){
-	var light = new THREE.AmbientLight( 0x202020 )
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 5)
-	light.position.set(0.5, 0.0, 2)
-	scene.add( light )
-	var light = new THREE.DirectionalLight('white', 0.75*2)
-	light.position.set(-0.5, -0.5, -2)
-	scene.add( light )		
+(function(){
+	var light = new THREE.AmbientLight( 0x202020 );
+	scene.add( light );
+	var light = new THREE.DirectionalLight(0xdfebff, 5);
+    light.target = mesh;
+	light.position.set( 50, 200, 100 );
+	scene.add( light );
+	var light = new THREE.DirectionalLight('white', 0.75*2);
+	light.position.set(-0.5, -0.5, -2);
+    light.target = mesh;
+    scene.add( light )
 })()
 var heightMap = THREEx.Terrain.allocateHeightMap(256,256)
-THREEx.Terrain.simplexHeightMap(heightMap)	
+THREEx.Terrain.simplexHeightMap(heightMap)
 var geometry = THREEx.Terrain.heightMapToPlaneGeometry(heightMap)
 THREEx.Terrain.heightMapToVertexColor(heightMap, geometry)
 
@@ -112,7 +143,12 @@ var shape = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
+
 shape.position.set(-1, 1.5, 1);
+
+	renderer.domElement.id='shape';
+shape.position.set(-1.5, 0.9, 1);
+
 scene.add( shape );
 
 
@@ -123,18 +159,31 @@ var shape3 = THREE.SceneUtils.createMultiMaterialObject(
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
+
 shape3.position.set(0.5, 1.5, -1);
+
+	renderer.domElement.id='shape3';
+shape3.position.set(0.5, 1.3, -1);
+
 scene.add( shape3 );
 
 
 // pyramid 3
 var shape2 = THREE.SceneUtils.createMultiMaterialObject(
+
 	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
 	new THREE.CylinderGeometry( 0, 1.8, 2, 4, 4 ),
 	multiMaterial );
 shape2.position.set(2.5, 1.5, -3);
-scene.add( shape2 );
 
+    // radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	
+	new THREE.CylinderGeometry( 0, 1.8, 2.2, 4, 4 ),
+    multiMaterial );
+    renderer.domElement.id='shape2';
+shape2.position.set(2.5, 1, -3);
+
+scene.add( shape2 );
 
 
 
@@ -188,6 +237,34 @@ var mesh2	= new THREE.Mesh( pyramid1, material2 )
 mesh2.position.y = 1;
 
 scene.add(mesh2)
+
+
+// pyramid 4
+var shape4 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape4';
+shape4.position.set(-1, 0, 10.5);
+scene.add( shape4 );
+
+// pyramid 5
+var shape5 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape5';
+shape5.position.set(-0.4, 0, 10.5);
+scene.add( shape5 );
+
+// pyramid 6
+var shape6 = THREE.SceneUtils.createMultiMaterialObject(
+	// radiusAtTop, radiusAtBottom, height, segmentsAroundRadius, segmentsAlongHeight,
+	new THREE.CylinderGeometry( 0, 0.3, 0.4, 4, 4 ),
+	multiMaterial );
+	renderer.domElement.id='shape6';
+shape6.position.set(0.2, 0, 10.5);
+scene.add( shape6 );
 
 
 
