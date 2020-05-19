@@ -518,27 +518,28 @@ h3 {
   }
 
   .show1 {
-    left: 385px;
-    top: 175px;
+    left: 583px;
+    top: 357px;
   }
   .show2 {
-    left: 500px;
+    left: 1060px;
+    top: 110px;
   }
   .show3 {
-    left: 1300px;
+    left: 1380px;
   }
   .show4{
-    left: 170px;
-    top: 425px;
+    left: 180px;
+    top: 720px;
   }
   .show5 {
-    left: 295px;
-    top: 415px;
+    left: 470px;
+    top: 690px;
 
   }
   .show6 {
-    left: 465px;
-    top: 405px;
+    left: 710px;
+    top: 660px;
   }
 }
 /* RESPONSIVE MAC*/
