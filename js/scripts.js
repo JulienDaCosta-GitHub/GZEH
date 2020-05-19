@@ -39,7 +39,8 @@ function init2()
 
     camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
     camera.position.y = 2;
-    camera.position.z = 20;
+    camera.position.z = 30;
+    camera.position.x=15;
 
     /*Roation dans l'espace*/
     camera.lookAt (new THREE.Vector3(1,0,0));
