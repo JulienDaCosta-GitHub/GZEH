@@ -74,7 +74,7 @@ overflow: hidden;
     top: 60px;
     font-family: 'ZCOOL XiaoWei', serif;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
 }
 .button1 {
     left: 600px;
@@ -217,7 +217,7 @@ overflow: hidden;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
   }
   
 
@@ -250,7 +250,7 @@ overflow: hidden;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
 }
 
 .text4 {
@@ -269,7 +269,7 @@ overflow: hidden;
     text-align: center;
     flex-direction: column;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
 }
 
 .text5 {
@@ -288,7 +288,7 @@ overflow: hidden;
     text-align: center;
     flex-direction: column;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
 }
 
 .text6 {
@@ -307,7 +307,7 @@ overflow: hidden;
     text-align: center;
     flex-direction: column;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 8px;
+    border-radius: 50px 5px 50px 5px;
 }
 .rotate{
     transition: 0.5s all ease;
@@ -318,6 +318,10 @@ overflow: hidden;
 h3 {
     font-family: 'Cinzel', serif;
     font-size: 200%;
+}
+p {
+  line-height: 20px;
+  margin: 15px;
 }
 
 
