@@ -68,7 +68,7 @@ function init2()
 
 
     /*Contrôle du zoom */
-    controls.minDistance = 1; // minimum distance to the target (see also dynamicTarget)
+    controls.minDistance = 30; // minimum distance to the target (see also dynamicTarget)
     controls.maxDistance = 50; // maximum distance to the target
 
     /*contrôle de l'orbite sur l'axe "polaire" */
