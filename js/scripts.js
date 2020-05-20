@@ -13,12 +13,23 @@ function init2()
     renderer.setSize (width, height);
     document.body.appendChild (renderer.domElement);
 
+
     scene = new THREE.Scene();
+
+    
 
     camera = new THREE.PerspectiveCamera (25, width/height, 0.01, 1000);
     camera.position.y = 2;
     camera.position.z = 30;
     camera.position.x=15;
+
+    /*Roation dans l'espace*/
+    camera.lookAt (new THREE.Vector3(1,0,0));
+
+    controls = new THREE.OrbitControls (camera, renderer.domElement);
+    
+    console.log(camera.position.z)
+    console.log(camera.position.y)
 
 
     /*Control Orbit*/
@@ -105,10 +116,8 @@ function init2()
     mesh.scale.multiplyScalar(10);
 }
 
-/*Rotation dans l'espace*/
 
-controls = new THREE.OrbitControls (camera, renderer.domElement);
-
+/*Roation dans l'espace*/
 function animate()
 {
     controls.update();
@@ -116,11 +125,12 @@ function animate()
     renderer.render (scene, camera);
 }
 
-/*Fonction qui remet la caméra à sa position initiale au click du logo */
+/*Fonction qui remet la caméra à sa posotion initiale au click du logo */
 function initialize() {
   camera.position.y = 2;
   camera.position.z = 30;
   camera.position.x = 15;
+
 }
 
 
