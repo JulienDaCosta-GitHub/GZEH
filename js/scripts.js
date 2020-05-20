@@ -23,9 +23,7 @@ function init2()
     camera.position.z = 30;
     camera.position.x=15;
 
-    /*Roation dans l'espace*/
-    camera.lookAt (new THREE.Vector3(1,0,0));
-
+    /*Rotation dans l'espace*/
     controls = new THREE.OrbitControls (camera, renderer.domElement);
     
     console.log(camera.position.z)
@@ -33,8 +31,6 @@ function init2()
 
 
     /*Control Orbit*/
-   
-
     controls.addEventListener('cameraChange', (event) => {
         const { position, target } = event.camera;
         // position & target in world space and instanceof THREE.Vector3
@@ -117,7 +113,7 @@ function init2()
 }
 
 
-/*Roation dans l'espace*/
+/*Rotation dans l'espace*/
 function animate()
 {
     controls.update();
