@@ -126,7 +126,6 @@ function initialize() {
   camera.position.y = 2;
   camera.position.z = 30;
   camera.position.x = 15;
-
 }
 
 
