@@ -3,6 +3,7 @@
 // This is particularly convenient in loop driven case, like in
 // 3D demos or games.
 //
+
 // # Usage
 //
 // **Step 1**: Create the object

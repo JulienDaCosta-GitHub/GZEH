@@ -12,6 +12,8 @@ Detector = {
 
 	getWebGLErrorMessage: function () {
 
+
+
 		var element = document.createElement( 'div' );
 		element.id = 'webgl-error-message';
 		element.style.fontFamily = 'monospace';

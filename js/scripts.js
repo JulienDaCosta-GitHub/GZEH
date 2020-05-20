@@ -13,6 +13,8 @@ var scene	= new THREE.Scene();
 var camera	= new THREE.PerspectiveCamera(25, window.innerWidth /    window.innerHeight, 0.01, 1000);
 
 
+
+
 camera.position.z = 15; /*Valeur initiale 15 */
 //camera.position.y = 2; /*Valeur initiale 2 */
 

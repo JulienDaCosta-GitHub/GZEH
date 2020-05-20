@@ -10,8 +10,6 @@ body{
     to { -webkit-transform: rotateY(360deg); }
 }
 
-
-
 .pyramid-gyro {
     position: absolute;
     top: 50%;

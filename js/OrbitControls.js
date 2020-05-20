@@ -374,7 +374,9 @@ function animate() {
 		}
 
 	}
-	
+
+
+
 	function onKeyUp( event ) {
 
 		switch ( event.keyCode ) {

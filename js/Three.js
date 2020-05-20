@@ -4279,6 +4279,8 @@ THREE.Matrix4.prototype = {
 
 		}
 
+
+
 		// last column
 		te[3] = 0;
 		te[7] = 0;

@@ -81,6 +81,8 @@ var GLTFLoader = ( function () {
 
 	}
 
+
+
 	GLTFLoader.prototype = Object.assign( Object.create( Loader.prototype ), {
 
 		constructor: GLTFLoader,

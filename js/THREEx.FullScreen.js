@@ -12,6 +12,7 @@
 var THREEx		= THREEx 		|| {};
 THREEx.FullScreen	= THREEx.FullScreen	|| {};
 
+
 /**
  * test if it is possible to have fullscreen
  * 
